@@ -10,25 +10,37 @@
       "name": "Sobre mi",
       "icon": "menu-icon tf-icons bx bx-home-circle",
       "slug": "dashboard",
-      "url" :"/admin"
+      "url" :"/admin/aboutme"
+    },
+    {
+      "name": "Servicios",
+      "icon": "menu-icon tf-icons bx bx-home-circle",
+      "slug": "dashboard",
+      "url" :"/admin/services"
     },
     {
       "name": "Resumen",
       "icon": "menu-icon tf-icons bx bx-home-circle",
       "slug": "dashboard",
-      "url" :"/admin"
+      "url" :"/admin/resume"
     },
     {
       "name": "Trabajos",
       "icon": "menu-icon tf-icons bx bx-home-circle",
       "slug": "dashboard",
-      "url" :"/admin"
+      "url" :"/admin/jobs"
     },
     {
       "name": "Blogs",
       "icon": "menu-icon tf-icons bx bx-home-circle",
       "slug": "dashboard",
-      "url" :"/admin"
+      "url" :"/admin/blogs"
+    },
+    {
+      "name": "Mensajes",
+      "icon": "menu-icon tf-icons bx bx-home-circle",
+      "slug": "dashboard",
+      "url" :"/admin/msgs"
     },
     
     

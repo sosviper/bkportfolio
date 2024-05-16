@@ -19,7 +19,9 @@
     <!--=== main css ===-->
     <link rel="stylesheet" href="{{ asset('css/tailwind.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}" />
-    <title>El Rincon de Isma </title>
+    <title>BK Ingenieros S.R.L. </title>
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
 
     <script>
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
@@ -39,21 +41,23 @@
     </div>
     <!-- /PRELOADER --> --}}
 
-    <div class="bg-homeBg dark:bg-homeBg-dark min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
+    <div class="w-full min-h-screen bg-fixed bg-center bg-no-repeat bg-cover bg-homeBg dark:bg-homeBg-dark md:pb-16">
         <div class="section-bg">
-            <div class="w-full flex justify-between px-4">
+            <div class="flex justify-between w-full px-4">
                 <!-- website Logo -->
-                
+                <a href="/" style="visibility: hidden">
+                    <img class="h-[26px] lg:h-[32px]" src="{{asset('images/LOGO.jpg')}}" alt="logo" />
+                </a>
                 <div class="flex items-center">
                     <!-- dark and light mode toggle -->
                     <button id="theme-toggle" type="button" class="dark-light-btn">
-                        <i id="theme-toggle-dark-icon" class="fa-solid text-xl fa-moon hidden"></i>
-                        <i id="theme-toggle-light-icon" class="fa-solid fa-sun text-xl hidden"></i>
+                        <i id="theme-toggle-dark-icon" class="hidden text-xl fa-solid fa-moon"></i>
+                        <i id="theme-toggle-light-icon" class="hidden text-xl fa-solid fa-sun"></i>
                     </button>
                     <!-- mobile toggle button -->
                     <button id="menu-toggle" type="button" class="menu-toggle-btn">
-                        <i id="menu-toggle-open-icon" class="fa-solid fa-bars text-xl "></i>
-                        <i id="menu-toggle-close-icon" class="fa-solid fa-xmark text-xl hidden  "></i>
+                        <i id="menu-toggle-open-icon" class="text-xl fa-solid fa-bars "></i>
+                        <i id="menu-toggle-close-icon" class="hidden text-xl fa-solid fa-xmark "></i>
                     </button>
                 </div>
             </div>
@@ -67,7 +71,7 @@
                     <a class="mobile-menu-items-active" href="./aboutOne.html">
                         <span class="mr-2 text-xl">
                             <i class="fa-regular fa-user"></i>
-                        </span>Sobre mi </a>
+                        </span>Nosotros </a>
                 </li>
                 <li>
                     <a class="mobile-menu-items" href="./resumeOne.html">
@@ -99,39 +103,39 @@
 
         <div class="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[220px]">
             <!-- sidber personal info -->
-            <div class="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44">
+            <div class="sticky hidden h-screen col-span-12 lg:col-span-4 lg:block top-44">
                 <div
                     class="w-full mb-6 lg:mb-0 mx-auto relative bg-white text-center dark:bg-[#111111] px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
                     <!-- profile image -->
-                    <img src="{{asset('images/LOGO.jpg')}}"
+                    <img src="{{ asset('storage/'.$user_public->profile_photo_path) }}"
                         class="w-[240px] absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px]"
                         alt="about" />
                     <div class="pt-[100px] pb-8">
-                        <h2 class="mt-6 mb-1 text-[26px] font-semibold dark:text-white"> Ismael Catalá </h2>
+                        <h2 class="mt-6 mb-1 text-[26px] font-semibold dark:text-white"> {{ $user_public->name }} </h2>
                         <h3
                             class="mb-4 text-[#7B7B7B] inline-block dark:bg-[#1D1D1D] px-5 py-1.5 rounded-lg dark:text-[#A6A6A6]">
-                            Software developer </h3>
+                            {{ $user_public->description }} </h3>
                         <div class="flex justify-center space-x-3">
                             <!-- facebook icon and link -->
-                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="{{ $user_public->facebook_url }}" target="_blank" rel="noopener noreferrer">
                                 <span class="socialbtn text-[#1773EA]">
                                     <i class="fa-brands fa-facebook-f"></i>
                                 </span>
                             </a>
                             <!-- twitter icon and link -->
-                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="{{ $user_public->twitter_url }}" target="_blank" rel="noopener noreferrer">
                                 <span class="socialbtn text-[#1C9CEA]">
                                     <i class="fa-brands fa-twitter"></i>
                                 </span>
                             </a>
                             <!-- dribbble icon and link -->
-                            <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="{{ $user_public->dribbble_url }}" target="_blank" rel="noopener noreferrer">
                                 <span class="socialbtn text-[#e14a84]">
                                     <i class="fa-brands fa-dribbble"></i>
                                 </span>
                             </a>
                             <!-- linkedin icon and link -->
-                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="{{ $user_public->linkedin_url }}" target="_blank" rel="noopener noreferrer">
                                 <span class="socialbtn text-[#0072b1]">
                                     <i class="fa-brands fa-linkedin-in"></i>
                                 </span>
@@ -145,7 +149,7 @@
                                 </span>
                                 <div class="text-left ml-2.5">
                                     <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Teléfono </p>
-                                    <p class="dark:text-white">+123 456 7890</p>
+                                    <p class="dark:text-white">{{ $user_public->phone }}</p>
                                 </div>
                             </div>
                             <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5">
@@ -154,7 +158,7 @@
                                 </span>
                                 <div class="text-left ml-2.5">
                                     <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Email </p>
-                                    <p class="dark:text-white">example@mail.com</p>
+                                    <p class="dark:text-white">{{ $user_public->email }}</p>
                                 </div>
                             </div>
                             <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5">
@@ -163,7 +167,7 @@
                                 </span>
                                 <div class="text-left ml-2.5">
                                     <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Dirección </p>
-                                    <p class="dark:text-white">Madrid, España</p>
+                                    <p class="dark:text-white">{{ $user_public->address }}</p>
                                 </div>
                             </div>
                             <div class="flex py-2.5">
@@ -172,14 +176,15 @@
                                 </span>
                                 <div class="text-left ml-2.5">
                                     <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Año de nacimiento </p>
-                                    <p class="dark:text-white">24 Sept, 1987</p>
+                                    <p class="dark:text-white">{{ Carbon\Carbon::parse($user_public->birthdate)->format('d-m-Y') }}
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <!-- personal infomation end-->
                         <!-- dowanload button -->
-                        <button class="dowanload-btn">
-                            <img class="mr-3" src="{{asset('images/icons/dowanload.png')}}" alt="icon" /> Descargar CV </button>
+                        {{--  <a href="{{ $user_public->url_cv }}"><button class="dowanload-btn">
+                            <img class="mr-3" src="{{asset('images/icons/dowanload.png')}}" alt="icon" /> Descargar CV </button></a>  --}}
                     </div>
                 </div>
             </div>
@@ -190,23 +195,23 @@
                     <nav class="hidden lg:block">
                         <ul class="flex">
                             <li> <a @if(Route::is('home')) class="menu-active" @else class="menu-item" @endif href="/">
-                                    <span class="text-xl mb-1">
+                                    <span class="mb-1 text-xl">
                                         <i class="fa-regular fa-user"></i>
-                                    </span> Sobre mi </a></li>
+                                    </span> Nosotros </a></li>
                             <li> <a @if(Route::is('resume')) class="menu-active" @else class="menu-item" @endif href="{{ route('resume') }}">
-                                    <span class="text-xl mb-1">
+                                    <span class="mb-1 text-xl">
                                         <i class="fa-regular fa-file-lines"></i>
                                     </span> Resumen </a></li>
                             <li> <a @if(Route::is('jobs')) class="menu-active" @else class="menu-item" @endif href="{{ route('jobs') }}">
-                                    <span class="text-xl mb-1">
+                                    <span class="mb-1 text-xl">
                                         <i class="fas fa-briefcase"></i>
                                     </span> Trabajos </a></li>
                             <li><a @if(Route::is('blog')) class="menu-active" @else class="menu-item" @endif href="{{ route('blog') }}">
-                                    <span class="text-xl mb-1">
+                                    <span class="mb-1 text-xl">
                                         <i class="fa-brands fa-blogger"></i>
                                     </span> Blogs </a></li>
                             <li> <a @if(Route::is('contact')) class="menu-active" @else class="menu-item" @endif href="{{ route('contact') }}">
-                                    <span class="text-xl mb-1">
+                                    <span class="mb-1 text-xl">
                                         <i class="fa-solid fa-address-book"></i>
                                     </span> Contacto </a></li>
                         </ul>
@@ -230,7 +235,7 @@
     <script src="{{ asset('js/jquery.modal.min.js') }}"></script>
     <!-- main js -->
     <script src="{{ asset('js/main.js') }}"></script>
-    
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 </body>
 
 </html>

@@ -16,15 +16,15 @@ class ClientSeeder extends Seeder
     {
         //
         Client::create([
-            'logo_url' => 'https://portafolio.test/images/slider/brand2.png',
+            'logo_url' => 'https://bkportafolio.test/images/slider/brand2.png',
             'name'=>'Diana',
         ]);
         Client::create([
-            'logo_url' => 'https://portafolio.test/images/slider/brand3.png',
+            'logo_url' => 'https://bkportafolio.test/images/slider/brand3.png',
             'name'=>'Penny',
         ]);
         Client::create([
-            'logo_url' => 'https://portafolio.test/images/slider/brand1.png',
+            'logo_url' => 'https://bkportafolio.test/images/slider/brand1.png',
             'name'=>'Sophy',
         ]);
     }

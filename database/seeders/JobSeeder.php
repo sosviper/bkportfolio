@@ -20,7 +20,7 @@ class JobSeeder extends Seeder
             'category' =>'Video',
             'title' =>'Campaña de Navidad',
             'subcategory' =>'Video',
-            'logo_url' =>'https://portafolio.test/images/work_images/small/1.jpg',
+            'logo_url' =>'https://bkportafolio.test/images/work_images/small/1.jpg',
             'color_hex' =>'#fcf4ff',
             'project_name' =>'Cocacola',
             'languages' =>'Spanish, English',

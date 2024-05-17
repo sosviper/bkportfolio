@@ -32,7 +32,6 @@ console_command = 'php /var/www/html/artisan tinker'
 
 [deploy]
   release_command = "php /var/www/html/artisan migrate:fresh --seed --force"
-  release_command = "php /var/www/html/artisan storage:link --force"
 
 [[vm]]
   memory = '1gb'

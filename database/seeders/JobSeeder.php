@@ -55,7 +55,7 @@ class JobSeeder extends Seeder
         Job::create([
             'category' =>'Web Design',
             'title' =>'Tradición Colca',
-            'subcategory' =>'Mobile',
+            'subcategory' =>'Web Design',
             'logo_url' =>'https://bkportafolio.test/images/work_images/small/4.jpg',
             'color_hex' =>'#fcf4ff',
             'project_name' =>'Diseño Web para la empresa Tradición Colca',

@@ -11,7 +11,7 @@
                 <ul
                     class="button-group isotop-menu-wrapper mt-[30px] flex w-full justify-start md:justify-end flex-wrap font-medium">
                     <li class="mr-4 fillter-btn md:mx-4 is-checked" data-filter="*">All</li>
-                    <li class="mr-4 fillter-btn md:mx-4" data-filter=".Video">Video</li>
+                    <li class="mr-4 fillter-btn md:mx-4" data-filter=".Apps">Apps</li>
                     <li class="mr-4 fillter-btn md:mx-4" data-filter=".Web Design"> Web Design</li>
                     <li class="mr-4 fillter-btn md:mx-4" data-filter=".Logo"> Logo</li>
                     <li class="mr-4 fillter-btn md:mx-4" data-filter=".Graphic Design">Graphic Design</li>

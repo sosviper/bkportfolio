@@ -66,21 +66,9 @@ class JobSeeder extends Seeder
         ]);
         Job::create([
             'category' =>'Web Design',
-            'title' =>'Tradición Colca',
-            'subcategory' =>'Mobile',
-            'logo_url' =>'https://bkportafolio.test/images/work_images/small/5.jpg',
-            'color_hex' =>'#fcf4ff',
-            'project_name' =>'Diseño Web para la empresa Tradición Colca',
-            'languages' =>'Spanish, English',
-            'client' =>'Tradición Colca',
-            'preview' =>'https://tradicioncolca.com',
-            'body' =>'Diseño del Sitio Web para la empresa Tradición Colca, que permite tener un enlace para que puedan realizar reservas de forma segura.',
-        ]);
-        Job::create([
-            'category' =>'Web Design',
             'title' =>'Kay pacha Lodge',
             'subcategory' =>'Web Design',
-            'logo_url' =>'https://bkportafolio.test/images/work_images/small/6.jpg',
+            'logo_url' =>'https://bkportafolio.test/images/work_images/small/5.jpg',
             'color_hex' =>'#fcf4ff',
             'project_name' =>'Diseño Web para KayPacha Lodge',
             'languages' =>'Spanish, English',

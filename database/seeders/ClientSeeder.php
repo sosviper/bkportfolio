@@ -17,15 +17,19 @@ class ClientSeeder extends Seeder
         //
         Client::create([
             'logo_url' => 'https://bkportafolio.test/images/slider/brand2.png',
-            'name'=>'Diana',
+            'name'=>'Kay Pacha Lodge',
         ]);
         Client::create([
             'logo_url' => 'https://bkportafolio.test/images/slider/brand3.png',
-            'name'=>'Penny',
+            'name'=>'Agroinca PPX',
         ]);
         Client::create([
             'logo_url' => 'https://bkportafolio.test/images/slider/brand1.png',
-            'name'=>'Sophy',
+            'name'=>'Fernando Vargas',
+        ]);
+        Client::create([
+            'logo_url' => 'https://bkportafolio.test/images/slider/brand4.png',
+            'name'=>'Tradición Colca',
         ]);
     }
 }

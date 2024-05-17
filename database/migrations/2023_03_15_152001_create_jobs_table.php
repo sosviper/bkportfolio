@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
-            $table->enum('category', ['Video', 'Web Design','Logo', 'Graphic Design']);
+            $table->enum('category', ['Apps', 'Mobile', 'Web Design','Logo', 'Graphic Design']);
             $table->string('title');
             $table->string('subcategory')->nullable();
             $table->string('logo_url')->nullable();

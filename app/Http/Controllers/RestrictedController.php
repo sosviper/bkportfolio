@@ -221,7 +221,7 @@ class RestrictedController extends Controller
 
     }
     public function jobsEdit(Job $job) {
-        $categories = array('Video','Web Design','Logo','Graphic Design');
+        $categories = array('Apps','Web Design','Logo','Graphic Design');
 
         return view('admin.jobs.edit',['categories' => $categories,'job'=>$job]);
 
